@@ -42,3 +42,4 @@
 /home/andre/funcional/webhook/obj/Debug/net9.0/webhook.pdb
 /home/andre/funcional/webhook/obj/Debug/net9.0/webhook.genruntimeconfig.cache
 /home/andre/funcional/webhook/obj/Debug/net9.0/ref/webhook.dll
+/home/andre/funcional/webhook/obj/Debug/net9.0/webhook.sourcelink.json

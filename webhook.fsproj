@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <Compile Include="Types.fs" />
+    <Compile Include="PaymentValidation.fs" />
+    <Compile Include="PaymentService.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
