@@ -16,7 +16,7 @@ let isTransactionUnique (transactionId: string) =
 /// Valida os campos do pagamento
 let isPayloadValid (payment: Payment) =
     not (String.IsNullOrWhiteSpace payment.transaction_id) &&
-    payment.amount > 0.0M &&
+    payment.amount > 0.0 &&
     payment.currency = "BRL" &&
     payment.event = "payment_success" &&
     not (String.IsNullOrWhiteSpace payment.timestamp)
