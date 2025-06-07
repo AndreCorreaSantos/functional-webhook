@@ -1,22 +1,22 @@
 module PaymentValidation
 
-open Types
 open System
+open Types
 
 let isValidToken (token: string) =
-    token = "meu-token-secreto"  // Token usado nos testes Python
+    token = "meu-token-secreto"
 
-/// Armazena as transações únicas já vistas
 let seen = System.Collections.Concurrent.ConcurrentDictionary<string, bool>()
+let isTransactionUnique id = seen.TryAdd(id, true)
 
-/// Verifica se a transação ainda não foi processada
-let isTransactionUnique (transactionId: string) =
-    seen.TryAdd(transactionId, true)
+let private tryParseAmount (s: string) =
+    match Decimal.TryParse(s) with
+    | true, v when v > 0.0M -> Some v
+    | _ -> None
 
-/// Valida os campos do pagamento
 let isPayloadValid (payment: Payment) =
-    not (String.IsNullOrWhiteSpace payment.transaction_id) &&
-    payment.amount > 0.0 &&
-    payment.currency = "BRL" &&
-    payment.event = "payment_success" &&
-    not (String.IsNullOrWhiteSpace payment.timestamp)
+    not (String.IsNullOrWhiteSpace payment.transaction_id)
+    && tryParseAmount payment.amount |> Option.isSome
+    && payment.currency = "BRL"
+    && payment.event = "payment_success"
+    && not (String.IsNullOrWhiteSpace payment.timestamp)

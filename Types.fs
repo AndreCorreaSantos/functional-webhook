@@ -2,7 +2,7 @@ module Types
 type Payment = {
     event: string
     transaction_id: string
-    amount: float
+    amount: string 
     currency: string
     timestamp: string
 }

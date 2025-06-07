@@ -23,7 +23,8 @@ let main args =
             Results.Unauthorized()
         else
             use reader = new System.IO.StreamReader(request.Body)
-            let body = reader.ReadToEnd()
+            let body = reader.ReadToEndAsync().Result
+
 
             let paymentOpt =
                 JsonSerializer.Deserialize<Payment>(body, JsonSerializerOptions(PropertyNameCaseInsensitive = true))
