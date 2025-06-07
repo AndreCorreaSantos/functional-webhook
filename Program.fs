@@ -22,35 +22,25 @@ let main args =
         if not (isValidToken token) then
             Results.Unauthorized()
         else
-            let result =
-                async {
-                    try
-                        use reader = new System.IO.StreamReader(request.Body)
-                        let! body = reader.ReadToEndAsync() |> Async.AwaitTask
+            use reader = new System.IO.StreamReader(request.Body)
+            let body = reader.ReadToEnd()
 
-                        let paymentOpt =
-                            JsonSerializer.Deserialize<Payment>(body, JsonSerializerOptions(PropertyNameCaseInsensitive = true))
-                            |> Option.ofObj
+            let paymentOpt =
+                JsonSerializer.Deserialize<Payment>(body, JsonSerializerOptions(PropertyNameCaseInsensitive = true))
+                |> Option.ofObj
 
-                        match paymentOpt with
-                        | None ->
-                            return Results.BadRequest()
-                        | Some payment ->
-                            if not (isPayloadValid payment) then
-                                let! _ = cancelTransaction payment
-                                return Results.BadRequest()
-                            elif not (isTransactionUnique payment.transaction_id) then
-                                return Results.StatusCode(409)
-                            else
-                                let! _ = confirmTransaction payment
-                                return Results.Ok("Pagamento confirmado")
-                    with ex ->
-                        printfn "Erro interno: %s" ex.Message
-                        return Results.StatusCode(500)
-                }
-                |> Async.RunSynchronously
-
-            result
+            match paymentOpt with
+            | None ->
+                Results.BadRequest()
+            | Some payment ->
+                if not (isPayloadValid payment) then
+                    cancelTransaction payment |> ignore
+                    Results.BadRequest()
+                elif not (isTransactionUnique payment.transaction_id) then
+                    Results.StatusCode(409)
+                else
+                    confirmTransaction payment |> ignore
+                    Results.Ok("Pagamento confirmado")
     )) |> ignore
 
     app.Run()

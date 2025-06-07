@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("webhook")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ae5936c33cd244f59a7785251c1688be9675e70")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce3a3fb2110430b08302efe36a12b5764d69cb32")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("webhook")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("webhook")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
