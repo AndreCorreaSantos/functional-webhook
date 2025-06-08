@@ -10,8 +10,8 @@ open PaymentService
 [<EntryPoint>]
 let main args =
     let builder = WebApplication.CreateBuilder(args)
+
     let app = builder.Build()
-    app.Urls.Add("http://localhost:5102")
 
     app.MapPost("/webhook", Func<HttpRequest, IResult>(fun request ->
         let token =
@@ -25,18 +25,17 @@ let main args =
             use reader = new System.IO.StreamReader(request.Body)
             let body = reader.ReadToEndAsync().Result
 
-
             let paymentOpt =
                 JsonSerializer.Deserialize<Payment>(body, JsonSerializerOptions(PropertyNameCaseInsensitive = true))
                 |> Option.ofObj
 
             match paymentOpt with
             | None ->
-                Results.BadRequest()
+                Results.BadRequest("Payload inválido")
             | Some payment ->
                 if not (isPayloadValid payment) then
                     cancelTransaction payment |> ignore
-                    Results.BadRequest()
+                    Results.BadRequest("Payload inválido")
                 elif not (isTransactionUnique payment.transaction_id) then
                     Results.StatusCode(409)
                 else
