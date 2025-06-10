@@ -11,8 +11,6 @@ dotnet build
 ```
 
 ### Checklist:
-
-### Checklist:
 - [X] O serviço deve verificar a integridade do payload
   - O servidor verifica se todos os campos obrigatórios estão presentes no payload recebido (exceto transaction_id que é opcional).
 - [X] O serviço deve implementar algum mecanismo de veracidade da transação
