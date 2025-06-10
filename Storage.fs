@@ -38,4 +38,3 @@ let storeSuccessfulPayment (payment: Types.Payment): Task<unit> = task {
     return ()
 }
 
-
