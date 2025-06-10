@@ -41,10 +41,30 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )",
+              "generatePathProperty": true
+            },
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
               "version": "[9.0.101, )",
+              "generatePathProperty": true
+            },
+            "Fsharp.Data.sqlClient": {
+              "target": "Package",
+              "version": "[2.1.3, )",
+              "generatePathProperty": true
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.5, )",
+              "generatePathProperty": true
+            },
+            "SQLProvider": {
+              "target": "Package",
+              "version": "[1.5.9, )",
               "generatePathProperty": true
             }
           },

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "Dapper/2.1.66": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FSharp.Core/9.0.101": {
         "type": "package",
         "compile": {
@@ -55,10 +68,384 @@
             "locale": "zh-Hant"
           }
         }
+      },
+      "FSharp.Data.SqlClient/2.1.3": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "8.0.301",
+          "System.Configuration.ConfigurationManager": "9.0.4",
+          "System.Data.SqlClient": "4.9.0"
+        },
+        "compile": {
+          "lib/net8.0/FSharp.Data.SqlClient.dll": {
+            "related": ".pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FSharp.Data.SqlClient.dll": {
+            "related": ".pdb;.XML"
+          }
+        }
+      },
+      "Microsoft.Data.Sqlite/9.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "9.0.5",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10",
+          "SQLitePCLRaw.core": "2.1.10"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/9.0.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Data.Sqlite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Data.Sqlite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        }
+      },
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          }
+        }
+      },
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x64/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x86/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.lib.e_sqlite3": "2.1.10",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.1.10"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.1.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net9.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a": {
+            "assetType": "native",
+            "rid": "browser-wasm"
+          },
+          "runtimes/linux-arm/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-armel/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-armel"
+          },
+          "runtimes/linux-mips64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-mips64"
+          },
+          "runtimes/linux-musl-arm/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-arm"
+          },
+          "runtimes/linux-musl-arm64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-arm64"
+          },
+          "runtimes/linux-musl-s390x/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-s390x"
+          },
+          "runtimes/linux-musl-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-ppc64le/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-ppc64le"
+          },
+          "runtimes/linux-s390x/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-s390x"
+          },
+          "runtimes/linux-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x86/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x86"
+          },
+          "runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib": {
+            "assetType": "native",
+            "rid": "maccatalyst-arm64"
+          },
+          "runtimes/maccatalyst-x64/native/libe_sqlite3.dylib": {
+            "assetType": "native",
+            "rid": "maccatalyst-x64"
+          },
+          "runtimes/osx-arm64/native/libe_sqlite3.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/libe_sqlite3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
+          },
+          "runtimes/win-arm64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+        },
+        "compile": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "SQLProvider/1.5.9": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "8.0.301",
+          "Newtonsoft.Json": "13.0.1",
+          "System.Memory": "4.6.3"
+        },
+        "compile": {
+          "lib/net8.0/FSharp.Data.SqlProvider.Common.dll": {
+            "related": ".deps.json;.pdb;.XML"
+          },
+          "lib/net8.0/FSharp.Data.SqlProvider.dll": {
+            "related": ".Common.deps.json;.Common.pdb;.Common.XML;.deps.json;.pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FSharp.Data.SqlProvider.Common.dll": {
+            "related": ".deps.json;.pdb;.XML"
+          },
+          "lib/net8.0/FSharp.Data.SqlProvider.dll": {
+            "related": ".Common.deps.json;.Common.pdb;.Common.XML;.deps.json;.pdb;.XML"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/9.0.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "9.0.4",
+          "System.Security.Cryptography.ProtectedData": "9.0.4"
+        },
+        "compile": {
+          "lib/net9.0/System.Configuration.ConfigurationManager.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Configuration.ConfigurationManager.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Data.SqlClient/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "compile": {
+          "lib/net8.0/System.Data.SqlClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Data.SqlClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/net8.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net8.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Diagnostics.EventLog/9.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          },
+          "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Memory/4.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/9.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
       }
     }
   },
   "libraries": {
+    "Dapper/2.1.66": {
+      "sha512": "/q77jUgDOS+bzkmk3Vy9SiWMaetTw+NOoPAV0xPBsGVAyljd5S6P+4RUW7R3ZUGGr9lDRyPKgAMj2UAOwvqZYw==",
+      "type": "package",
+      "path": "dapper/2.1.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.66.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net8.0/Dapper.dll",
+        "lib/net8.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
+      ]
+    },
     "FSharp.Core/9.0.101": {
       "sha512": "QHDT/DO39AtOGyTm3nN3EecoyJYSsG64uOJNAedBPib/oAOr3uPsXJQB0JOavXBP4qVzb8w4+jPCuOOoZJ6cdA==",
       "type": "package",
@@ -99,11 +486,930 @@
         "lib/netstandard2.1/zh-Hans/FSharp.Core.resources.dll",
         "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll"
       ]
+    },
+    "FSharp.Data.SqlClient/2.1.3": {
+      "sha512": "lVFpIxBIZYXCr4/cu/sWsd/sk5QZxn7eNo7CKEcUUUdek+nV5KJoliltcUsgfKgQ+BybEdneTBW1kIQ77gm22g==",
+      "type": "package",
+      "path": "fsharp.data.sqlclient/2.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsharp.data.sqlclient.2.1.3.nupkg.sha512",
+        "fsharp.data.sqlclient.nuspec",
+        "lib/net462/FSharp.Data.SqlClient.XML",
+        "lib/net462/FSharp.Data.SqlClient.dll",
+        "lib/net462/FSharp.Data.SqlClient.pdb",
+        "lib/net8.0/FSharp.Data.SqlClient.XML",
+        "lib/net8.0/FSharp.Data.SqlClient.dll",
+        "lib/net8.0/FSharp.Data.SqlClient.pdb",
+        "lib/netstandard2.0/FSharp.Data.SqlClient.XML",
+        "lib/netstandard2.0/FSharp.Data.SqlClient.dll",
+        "lib/netstandard2.0/FSharp.Data.SqlClient.pdb",
+        "lib/typeproviders/fsharp41/net462/FSharp.Data.SqlClient.DesignTime.dll",
+        "lib/typeproviders/fsharp41/net462/FSharp.Data.SqlClient.DesignTime.pdb",
+        "lib/typeproviders/fsharp41/net462/Microsoft.SqlServer.TransactSql.ScriptDom.dll",
+        "lib/typeproviders/fsharp41/net462/Microsoft.SqlServer.Types.dll",
+        "lib/typeproviders/fsharp41/net462/Microsoft.Win32.Primitives.dll",
+        "lib/typeproviders/fsharp41/net462/System.AppContext.dll",
+        "lib/typeproviders/fsharp41/net462/System.Collections.Concurrent.dll",
+        "lib/typeproviders/fsharp41/net462/System.Collections.NonGeneric.dll",
+        "lib/typeproviders/fsharp41/net462/System.Collections.Specialized.dll",
+        "lib/typeproviders/fsharp41/net462/System.Collections.dll",
+        "lib/typeproviders/fsharp41/net462/System.ComponentModel.EventBasedAsync.dll",
+        "lib/typeproviders/fsharp41/net462/System.ComponentModel.Primitives.dll",
+        "lib/typeproviders/fsharp41/net462/System.ComponentModel.TypeConverter.dll",
+        "lib/typeproviders/fsharp41/net462/System.ComponentModel.dll",
+        "lib/typeproviders/fsharp41/net462/System.Configuration.ConfigurationManager.dll",
+        "lib/typeproviders/fsharp41/net462/System.Console.dll",
+        "lib/typeproviders/fsharp41/net462/System.Data.Common.dll",
+        "lib/typeproviders/fsharp41/net462/System.Data.SqlClient.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.Contracts.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.Debug.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.FileVersionInfo.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.Process.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.StackTrace.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.TextWriterTraceListener.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.Tools.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.TraceSource.dll",
+        "lib/typeproviders/fsharp41/net462/System.Diagnostics.Tracing.dll",
+        "lib/typeproviders/fsharp41/net462/System.Drawing.Primitives.dll",
+        "lib/typeproviders/fsharp41/net462/System.Dynamic.Runtime.dll",
+        "lib/typeproviders/fsharp41/net462/System.Globalization.Calendars.dll",
+        "lib/typeproviders/fsharp41/net462/System.Globalization.Extensions.dll",
+        "lib/typeproviders/fsharp41/net462/System.Globalization.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.Compression.ZipFile.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.Compression.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.FileSystem.DriveInfo.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.FileSystem.Primitives.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.FileSystem.Watcher.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.FileSystem.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.IsolatedStorage.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.MemoryMappedFiles.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.Pipes.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.UnmanagedMemoryStream.dll",
+        "lib/typeproviders/fsharp41/net462/System.IO.dll",
+        "lib/typeproviders/fsharp41/net462/System.Linq.Expressions.dll",
+        "lib/typeproviders/fsharp41/net462/System.Linq.Parallel.dll",
+        "lib/typeproviders/fsharp41/net462/System.Linq.Queryable.dll",
+        "lib/typeproviders/fsharp41/net462/System.Linq.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.Http.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.NameResolution.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.NetworkInformation.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.Ping.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.Primitives.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.Requests.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.Security.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.Sockets.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.WebHeaderCollection.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.WebSockets.Client.dll",
+        "lib/typeproviders/fsharp41/net462/System.Net.WebSockets.dll",
+        "lib/typeproviders/fsharp41/net462/System.ObjectModel.dll",
+        "lib/typeproviders/fsharp41/net462/System.Reflection.Extensions.dll",
+        "lib/typeproviders/fsharp41/net462/System.Reflection.Primitives.dll",
+        "lib/typeproviders/fsharp41/net462/System.Reflection.dll",
+        "lib/typeproviders/fsharp41/net462/System.Resources.Reader.dll",
+        "lib/typeproviders/fsharp41/net462/System.Resources.ResourceManager.dll",
+        "lib/typeproviders/fsharp41/net462/System.Resources.Writer.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.CompilerServices.VisualC.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.Extensions.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.Handles.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.InteropServices.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.Numerics.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.Serialization.Formatters.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.Serialization.Json.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.Serialization.Primitives.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.Serialization.Xml.dll",
+        "lib/typeproviders/fsharp41/net462/System.Runtime.dll",
+        "lib/typeproviders/fsharp41/net462/System.Security.Claims.dll",
+        "lib/typeproviders/fsharp41/net462/System.Security.Cryptography.Algorithms.dll",
+        "lib/typeproviders/fsharp41/net462/System.Security.Cryptography.Csp.dll",
+        "lib/typeproviders/fsharp41/net462/System.Security.Cryptography.Encoding.dll",
+        "lib/typeproviders/fsharp41/net462/System.Security.Cryptography.Primitives.dll",
+        "lib/typeproviders/fsharp41/net462/System.Security.Cryptography.X509Certificates.dll",
+        "lib/typeproviders/fsharp41/net462/System.Security.Principal.dll",
+        "lib/typeproviders/fsharp41/net462/System.Security.SecureString.dll",
+        "lib/typeproviders/fsharp41/net462/System.Text.Encoding.Extensions.dll",
+        "lib/typeproviders/fsharp41/net462/System.Text.Encoding.dll",
+        "lib/typeproviders/fsharp41/net462/System.Text.RegularExpressions.dll",
+        "lib/typeproviders/fsharp41/net462/System.Threading.Overlapped.dll",
+        "lib/typeproviders/fsharp41/net462/System.Threading.Tasks.Parallel.dll",
+        "lib/typeproviders/fsharp41/net462/System.Threading.Tasks.dll",
+        "lib/typeproviders/fsharp41/net462/System.Threading.Thread.dll",
+        "lib/typeproviders/fsharp41/net462/System.Threading.ThreadPool.dll",
+        "lib/typeproviders/fsharp41/net462/System.Threading.Timer.dll",
+        "lib/typeproviders/fsharp41/net462/System.Threading.dll",
+        "lib/typeproviders/fsharp41/net462/System.ValueTuple.dll",
+        "lib/typeproviders/fsharp41/net462/System.Xml.ReaderWriter.dll",
+        "lib/typeproviders/fsharp41/net462/System.Xml.XDocument.dll",
+        "lib/typeproviders/fsharp41/net462/System.Xml.XPath.XDocument.dll",
+        "lib/typeproviders/fsharp41/net462/System.Xml.XPath.dll",
+        "lib/typeproviders/fsharp41/net462/System.Xml.XmlDocument.dll",
+        "lib/typeproviders/fsharp41/net462/System.Xml.XmlSerializer.dll",
+        "lib/typeproviders/fsharp41/net462/cs/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/de/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/de/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/es/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/es/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/fr/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/fr/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/it/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/it/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/ja/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/ja/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/ko/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/ko/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/netstandard.dll",
+        "lib/typeproviders/fsharp41/net462/pl/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/pt-BR/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/pt/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/ru/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/ru/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/tr/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/x64/SqlServerSpatial160.dll",
+        "lib/typeproviders/fsharp41/net462/x86/SqlServerSpatial160.dll",
+        "lib/typeproviders/fsharp41/net462/zh-Hans/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/zh-Hans/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net462/zh-Hant/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net462/zh-Hant/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/FSharp.Data.SqlClient.DesignTime.dll",
+        "lib/typeproviders/fsharp41/net8.0/FSharp.Data.SqlClient.DesignTime.pdb",
+        "lib/typeproviders/fsharp41/net8.0/Microsoft.SqlServer.Server.dll",
+        "lib/typeproviders/fsharp41/net8.0/Microsoft.SqlServer.TransactSql.ScriptDom.dll",
+        "lib/typeproviders/fsharp41/net8.0/Microsoft.SqlServer.Types.dll",
+        "lib/typeproviders/fsharp41/net8.0/System.Configuration.ConfigurationManager.dll",
+        "lib/typeproviders/fsharp41/net8.0/System.Data.SqlClient.dll",
+        "lib/typeproviders/fsharp41/net8.0/System.Diagnostics.EventLog.dll",
+        "lib/typeproviders/fsharp41/net8.0/System.Runtime.Caching.dll",
+        "lib/typeproviders/fsharp41/net8.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/typeproviders/fsharp41/net8.0/cs/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/de/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/de/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/es/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/es/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/fr/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/fr/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/it/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/it/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/ja/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/ja/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/ko/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/ko/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/pl/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/pt-BR/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/pt-BR/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/ru/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/ru/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/unix/lib/net8.0/System.Data.SqlClient.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win-arm64/native/sni.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win-x64/native/SqlServerSpatial160.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win-x64/native/sni.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win-x86/native/SqlServerSpatial160.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win-x86/native/sni.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/System.Data.SqlClient.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll",
+        "lib/typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/System.Runtime.Caching.dll",
+        "lib/typeproviders/fsharp41/net8.0/tr/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/zh-Hans/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/zh-Hans/Microsoft.SqlServer.Types.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/zh-Hant/Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll",
+        "lib/typeproviders/fsharp41/net8.0/zh-Hant/Microsoft.SqlServer.Types.resources.dll"
+      ]
+    },
+    "Microsoft.Data.Sqlite/9.0.5": {
+      "sha512": "Fht/vwX7uzPaIdlj1xtcpKD225GXjPOj7iW8934NNiTfBX5uqeCy2TdlPWPpLj+VPty/UmfgUSJSb55hXHqJMw==",
+      "type": "package",
+      "path": "microsoft.data.sqlite/9.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/netstandard2.0/_._",
+        "microsoft.data.sqlite.9.0.5.nupkg.sha512",
+        "microsoft.data.sqlite.nuspec"
+      ]
+    },
+    "Microsoft.Data.Sqlite.Core/9.0.5": {
+      "sha512": "cP5eBSqra4Ae80X72g0h2N+jdrA4BgoMQmz9JaQmKAEXUHw9N21DPIBqIyMjOo2fK9ISiGytlAOxBAJf1hEvqg==",
+      "type": "package",
+      "path": "microsoft.data.sqlite.core/9.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net6.0/Microsoft.Data.Sqlite.dll",
+        "lib/net6.0/Microsoft.Data.Sqlite.xml",
+        "lib/net8.0/Microsoft.Data.Sqlite.dll",
+        "lib/net8.0/Microsoft.Data.Sqlite.xml",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
+        "microsoft.data.sqlite.core.9.0.5.nupkg.sha512",
+        "microsoft.data.sqlite.core.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==",
+      "type": "package",
+      "path": "runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.native.system.data.sqlclient.sni.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "LbrynESTp3bm5O/+jGL8v0Qg5SJlTV08lpIpFesXjF6uGNMWqFnUQbYBJwZTeua6E/Y7FIM1C54Ey1btLWupdg==",
+      "type": "package",
+      "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-arm64/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "38ugOfkYJqJoX9g6EYRlZB5U2ZJH51UP8ptxZgdpS07FgOEToV+lS11ouNK2PM12Pr6X/PpT5jK82G3DwH/SxQ==",
+      "type": "package",
+      "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-x64.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-x64/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
+      "type": "package",
+      "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-x86.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-x86/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
+      "sha512": "UxWuisvZ3uVcVOLJQv7urM/JiQH+v3TmaJc1BLKl5Dxfm/nTzTUrqswCqg/INiYLi61AXnHo1M1JPmPqqLnAdg==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.xml",
+        "lib/net6.0-ios14.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-tvos10.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/xamarinios10/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+        "sqlitepclraw.bundle_e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/2.1.10": {
+      "sha512": "Ii8JCbC7oiVclaE/mbDEK000EFIJ+ShRPwAvvV89GOZhQ+ZLtlnSWl6ksCNMKu/VGXA4Nfi2B7LhN/QFN9oBcw==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.2.1.10.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.lib.e_sqlite3/2.1.10": {
+      "sha512": "mAr69tDbnf3QJpRy2nJz8Qdpebdil00fvycyByR58Cn9eARvR+UiG2Vzsp+4q1tV3ikwiYIjlXCQFc12GfebbA==",
+      "type": "package",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "buildTransitive/net461/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "buildTransitive/net6.0/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "buildTransitive/net8.0/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "buildTransitive/net9.0/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "lib/net461/_._",
+        "lib/netstandard2.0/_._",
+        "runtimes/browser-wasm/nativeassets/net6.0/e_sqlite3.a",
+        "runtimes/browser-wasm/nativeassets/net7.0/e_sqlite3.a",
+        "runtimes/browser-wasm/nativeassets/net8.0/e_sqlite3.a",
+        "runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a",
+        "runtimes/linux-arm/native/libe_sqlite3.so",
+        "runtimes/linux-arm64/native/libe_sqlite3.so",
+        "runtimes/linux-armel/native/libe_sqlite3.so",
+        "runtimes/linux-mips64/native/libe_sqlite3.so",
+        "runtimes/linux-musl-arm/native/libe_sqlite3.so",
+        "runtimes/linux-musl-arm64/native/libe_sqlite3.so",
+        "runtimes/linux-musl-s390x/native/libe_sqlite3.so",
+        "runtimes/linux-musl-x64/native/libe_sqlite3.so",
+        "runtimes/linux-ppc64le/native/libe_sqlite3.so",
+        "runtimes/linux-s390x/native/libe_sqlite3.so",
+        "runtimes/linux-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x86/native/libe_sqlite3.so",
+        "runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib",
+        "runtimes/maccatalyst-x64/native/libe_sqlite3.dylib",
+        "runtimes/osx-arm64/native/libe_sqlite3.dylib",
+        "runtimes/osx-x64/native/libe_sqlite3.dylib",
+        "runtimes/win-arm/native/e_sqlite3.dll",
+        "runtimes/win-arm64/native/e_sqlite3.dll",
+        "runtimes/win-x64/native/e_sqlite3.dll",
+        "runtimes/win-x86/native/e_sqlite3.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/e_sqlite3.dll",
+        "sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+      "sha512": "uZVTi02C1SxqzgT0HqTWatIbWGb40iIkfc3FpFCpE/r7g6K0PqzDUeefL6P6HPhDtc6BacN3yQysfzP7ks+wSQ==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0-windows7.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+        "sqlitepclraw.provider.e_sqlite3.nuspec"
+      ]
+    },
+    "SQLProvider/1.5.9": {
+      "sha512": "bPGLyFwFdCSjAuj8jOJAa4bb2BEVOGdDN4qmBX/erDFTUnUAZu7vuWiaSY6C8k+ODdFi8tqyCzGNumLMvPz1kA==",
+      "type": "package",
+      "path": "sqlprovider/1.5.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/FSharp.Data.SqlProvider.Common.XML",
+        "lib/net472/FSharp.Data.SqlProvider.Common.dll",
+        "lib/net472/FSharp.Data.SqlProvider.Common.pdb",
+        "lib/net472/FSharp.Data.SqlProvider.XML",
+        "lib/net472/FSharp.Data.SqlProvider.dll",
+        "lib/net472/FSharp.Data.SqlProvider.pdb",
+        "lib/net48/FSharp.Data.SqlProvider.Common.XML",
+        "lib/net48/FSharp.Data.SqlProvider.Common.dll",
+        "lib/net48/FSharp.Data.SqlProvider.Common.pdb",
+        "lib/net48/FSharp.Data.SqlProvider.XML",
+        "lib/net48/FSharp.Data.SqlProvider.dll",
+        "lib/net48/FSharp.Data.SqlProvider.pdb",
+        "lib/net6.0/FSharp.Data.SqlProvider.Common.XML",
+        "lib/net6.0/FSharp.Data.SqlProvider.Common.deps.json",
+        "lib/net6.0/FSharp.Data.SqlProvider.Common.dll",
+        "lib/net6.0/FSharp.Data.SqlProvider.Common.pdb",
+        "lib/net6.0/FSharp.Data.SqlProvider.XML",
+        "lib/net6.0/FSharp.Data.SqlProvider.deps.json",
+        "lib/net6.0/FSharp.Data.SqlProvider.dll",
+        "lib/net6.0/FSharp.Data.SqlProvider.pdb",
+        "lib/net8.0/FSharp.Data.SqlProvider.Common.XML",
+        "lib/net8.0/FSharp.Data.SqlProvider.Common.deps.json",
+        "lib/net8.0/FSharp.Data.SqlProvider.Common.dll",
+        "lib/net8.0/FSharp.Data.SqlProvider.Common.pdb",
+        "lib/net8.0/FSharp.Data.SqlProvider.XML",
+        "lib/net8.0/FSharp.Data.SqlProvider.deps.json",
+        "lib/net8.0/FSharp.Data.SqlProvider.dll",
+        "lib/net8.0/FSharp.Data.SqlProvider.pdb",
+        "lib/netstandard2.0/FSharp.Data.SqlProvider.Common.XML",
+        "lib/netstandard2.0/FSharp.Data.SqlProvider.Common.deps.json",
+        "lib/netstandard2.0/FSharp.Data.SqlProvider.Common.dll",
+        "lib/netstandard2.0/FSharp.Data.SqlProvider.Common.pdb",
+        "lib/netstandard2.0/FSharp.Data.SqlProvider.XML",
+        "lib/netstandard2.0/FSharp.Data.SqlProvider.deps.json",
+        "lib/netstandard2.0/FSharp.Data.SqlProvider.dll",
+        "lib/netstandard2.0/FSharp.Data.SqlProvider.pdb",
+        "lib/netstandard2.1/FSharp.Data.SqlProvider.Common.XML",
+        "lib/netstandard2.1/FSharp.Data.SqlProvider.Common.deps.json",
+        "lib/netstandard2.1/FSharp.Data.SqlProvider.Common.dll",
+        "lib/netstandard2.1/FSharp.Data.SqlProvider.Common.pdb",
+        "lib/netstandard2.1/FSharp.Data.SqlProvider.XML",
+        "lib/netstandard2.1/FSharp.Data.SqlProvider.deps.json",
+        "lib/netstandard2.1/FSharp.Data.SqlProvider.dll",
+        "lib/netstandard2.1/FSharp.Data.SqlProvider.pdb",
+        "sqlprovider.1.5.9.nupkg.sha512",
+        "sqlprovider.nuspec",
+        "typeproviders/fsharp41/net472/FSharp.Core.dll",
+        "typeproviders/fsharp41/net472/FSharp.Data.SqlProvider.Common.dll",
+        "typeproviders/fsharp41/net472/FSharp.Data.SqlProvider.DesignTime.dll",
+        "typeproviders/fsharp41/net472/System.Buffers.dll",
+        "typeproviders/fsharp41/net472/System.Configuration.ConfigurationManager.dll",
+        "typeproviders/fsharp41/net472/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net472/System.Data.OleDb.dll",
+        "typeproviders/fsharp41/net472/System.Data.SqlClient.dll",
+        "typeproviders/fsharp41/net472/System.Memory.dll",
+        "typeproviders/fsharp41/net472/System.Numerics.Vectors.dll",
+        "typeproviders/fsharp41/net472/System.Runtime.CompilerServices.Unsafe.dll",
+        "typeproviders/fsharp41/net472/System.Security.AccessControl.dll",
+        "typeproviders/fsharp41/net472/System.Security.Cryptography.ProtectedData.dll",
+        "typeproviders/fsharp41/net472/System.Security.Principal.Windows.dll",
+        "typeproviders/fsharp41/net472/cs/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/de/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/es/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/fr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/it/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/ja/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/ko/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/netstandard.dll",
+        "typeproviders/fsharp41/net472/pl/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/pt-BR/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/ru/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/tr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/zh-Hans/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net472/zh-Hant/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/FSharp.Core.dll",
+        "typeproviders/fsharp41/net48/FSharp.Data.SqlProvider.Common.dll",
+        "typeproviders/fsharp41/net48/FSharp.Data.SqlProvider.DesignTime.dll",
+        "typeproviders/fsharp41/net48/System.Buffers.dll",
+        "typeproviders/fsharp41/net48/System.Configuration.ConfigurationManager.dll",
+        "typeproviders/fsharp41/net48/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net48/System.Data.OleDb.dll",
+        "typeproviders/fsharp41/net48/System.Data.SqlClient.dll",
+        "typeproviders/fsharp41/net48/System.Memory.dll",
+        "typeproviders/fsharp41/net48/System.Numerics.Vectors.dll",
+        "typeproviders/fsharp41/net48/System.Runtime.CompilerServices.Unsafe.dll",
+        "typeproviders/fsharp41/net48/System.Security.AccessControl.dll",
+        "typeproviders/fsharp41/net48/System.Security.Cryptography.ProtectedData.dll",
+        "typeproviders/fsharp41/net48/System.Security.Principal.Windows.dll",
+        "typeproviders/fsharp41/net48/cs/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/de/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/es/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/fr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/it/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/ja/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/ko/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/netstandard.dll",
+        "typeproviders/fsharp41/net48/pl/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/pt-BR/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/ru/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/tr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/zh-Hans/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net48/zh-Hant/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/Azure.Core.dll",
+        "typeproviders/fsharp41/net6.0/Azure.Identity.dll",
+        "typeproviders/fsharp41/net6.0/FSharp.Core.dll",
+        "typeproviders/fsharp41/net6.0/FSharp.Data.SqlProvider.Common.dll",
+        "typeproviders/fsharp41/net6.0/FSharp.Data.SqlProvider.DesignTime.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.Bcl.Memory.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.Bcl.TimeProvider.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.Data.SqlClient.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.Identity.Client.Extensions.Msal.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.Identity.Client.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.IdentityModel.Logging.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.IdentityModel.Protocols.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.IdentityModel.Tokens.dll",
+        "typeproviders/fsharp41/net6.0/Microsoft.SqlServer.Server.dll",
+        "typeproviders/fsharp41/net6.0/System.ClientModel.dll",
+        "typeproviders/fsharp41/net6.0/System.Configuration.ConfigurationManager.dll",
+        "typeproviders/fsharp41/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/System.Data.OleDb.dll",
+        "typeproviders/fsharp41/net6.0/System.Diagnostics.DiagnosticSource.dll",
+        "typeproviders/fsharp41/net6.0/System.Diagnostics.PerformanceCounter.dll",
+        "typeproviders/fsharp41/net6.0/System.IO.Pipelines.dll",
+        "typeproviders/fsharp41/net6.0/System.IdentityModel.Tokens.Jwt.dll",
+        "typeproviders/fsharp41/net6.0/System.Memory.Data.dll",
+        "typeproviders/fsharp41/net6.0/System.Runtime.Caching.dll",
+        "typeproviders/fsharp41/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "typeproviders/fsharp41/net6.0/System.Security.Cryptography.ProtectedData.dll",
+        "typeproviders/fsharp41/net6.0/System.Text.Encodings.Web.dll",
+        "typeproviders/fsharp41/net6.0/System.Text.Json.dll",
+        "typeproviders/fsharp41/net6.0/cs/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/de/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/de/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/es/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/es/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/fr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/fr/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/it/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/it/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/ja/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/ja/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/ko/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/ko/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/pl/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/pt-BR/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/pt-BR/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/ru/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/ru/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/freebsd/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/illumos/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/ios/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/linux/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/osx/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/solaris/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/tvos/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/win/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net6.0/runtimes/win/lib/net6.0/System.Data.OleDb.dll",
+        "typeproviders/fsharp41/net6.0/tr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/zh-Hans/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/zh-Hans/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net6.0/zh-Hant/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net6.0/zh-Hant/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/Azure.Core.dll",
+        "typeproviders/fsharp41/net8.0/Azure.Identity.dll",
+        "typeproviders/fsharp41/net8.0/FSharp.Core.dll",
+        "typeproviders/fsharp41/net8.0/FSharp.Data.SqlProvider.Common.dll",
+        "typeproviders/fsharp41/net8.0/FSharp.Data.SqlProvider.DesignTime.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.Bcl.Memory.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.Data.SqlClient.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.Identity.Client.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.IdentityModel.Abstractions.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.IdentityModel.Logging.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.IdentityModel.Protocols.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.IdentityModel.Tokens.dll",
+        "typeproviders/fsharp41/net8.0/Microsoft.SqlServer.Server.dll",
+        "typeproviders/fsharp41/net8.0/System.ClientModel.dll",
+        "typeproviders/fsharp41/net8.0/System.Configuration.ConfigurationManager.dll",
+        "typeproviders/fsharp41/net8.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/System.Data.OleDb.dll",
+        "typeproviders/fsharp41/net8.0/System.Diagnostics.DiagnosticSource.dll",
+        "typeproviders/fsharp41/net8.0/System.Diagnostics.EventLog.dll",
+        "typeproviders/fsharp41/net8.0/System.Diagnostics.PerformanceCounter.dll",
+        "typeproviders/fsharp41/net8.0/System.IO.Pipelines.dll",
+        "typeproviders/fsharp41/net8.0/System.IdentityModel.Tokens.Jwt.dll",
+        "typeproviders/fsharp41/net8.0/System.Memory.Data.dll",
+        "typeproviders/fsharp41/net8.0/System.Runtime.Caching.dll",
+        "typeproviders/fsharp41/net8.0/System.Security.Cryptography.ProtectedData.dll",
+        "typeproviders/fsharp41/net8.0/System.Text.Encodings.Web.dll",
+        "typeproviders/fsharp41/net8.0/System.Text.Json.dll",
+        "typeproviders/fsharp41/net8.0/cs/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/de/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/de/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/es/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/es/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/fr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/fr/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/it/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/it/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/ja/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/ja/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/ko/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/ko/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/pl/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/pt-BR/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/pt-BR/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/ru/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/ru/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/freebsd/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/illumos/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/ios/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/linux/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/osx/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/solaris/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/tvos/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/unix/lib/net8.0/Microsoft.Data.SqlClient.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win/lib/net6.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win/lib/net6.0/System.Data.OleDb.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/Microsoft.Data.SqlClient.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.dll",
+        "typeproviders/fsharp41/net8.0/runtimes/win/lib/net8.0/System.Runtime.Caching.dll",
+        "typeproviders/fsharp41/net8.0/tr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/zh-Hans/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/zh-Hans/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/net8.0/zh-Hant/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/net8.0/zh-Hant/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/FSharp.Core.dll",
+        "typeproviders/fsharp41/netstandard2.0/FSharp.Data.SqlProvider.Common.dll",
+        "typeproviders/fsharp41/netstandard2.0/FSharp.Data.SqlProvider.DesignTime.dll",
+        "typeproviders/fsharp41/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Buffers.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Data.Common.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Data.OleDb.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Data.SqlClient.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Diagnostics.PerformanceCounter.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Memory.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Numerics.Vectors.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Runtime.Loader.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Security.AccessControl.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Security.Principal.Windows.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Text.RegularExpressions.dll",
+        "typeproviders/fsharp41/netstandard2.0/System.Threading.dll",
+        "typeproviders/fsharp41/netstandard2.0/cs/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/de/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/es/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/fr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/it/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/ja/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/ko/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/pl/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/pt-BR/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/ru/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/tr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/zh-Hans/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.0/zh-Hant/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/Azure.Core.dll",
+        "typeproviders/fsharp41/netstandard2.1/Azure.Identity.dll",
+        "typeproviders/fsharp41/netstandard2.1/FSharp.Core.dll",
+        "typeproviders/fsharp41/netstandard2.1/FSharp.Data.SqlProvider.Common.dll",
+        "typeproviders/fsharp41/netstandard2.1/FSharp.Data.SqlProvider.DesignTime.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Bcl.Memory.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Bcl.TimeProvider.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.CSharp.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Data.SqlClient.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Extensions.Logging.Abstractions.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Identity.Client.Extensions.Msal.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Identity.Client.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.IdentityModel.Abstractions.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.IdentityModel.Logging.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.IdentityModel.Protocols.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.IdentityModel.Tokens.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.SqlServer.Server.dll",
+        "typeproviders/fsharp41/netstandard2.1/Microsoft.Win32.Registry.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.ClientModel.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Configuration.ConfigurationManager.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Data.Common.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Data.Odbc.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Data.OleDb.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Data.SqlClient.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Diagnostics.DiagnosticSource.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Diagnostics.PerformanceCounter.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.IO.FileSystem.AccessControl.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.IO.Pipelines.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.IdentityModel.Tokens.Jwt.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Memory.Data.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Runtime.Caching.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Runtime.Loader.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Security.AccessControl.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Security.Cryptography.Cng.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Security.Cryptography.ProtectedData.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Security.Principal.Windows.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Text.Encoding.CodePages.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Text.Encodings.Web.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Text.Json.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Text.RegularExpressions.dll",
+        "typeproviders/fsharp41/netstandard2.1/System.Threading.dll",
+        "typeproviders/fsharp41/netstandard2.1/cs/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/de/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/de/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/es/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/es/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/fr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/fr/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/it/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/it/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/ja/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/ja/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/ko/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/ko/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/pl/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/pt-BR/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/pt-BR/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/ru/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/ru/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/tr/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/zh-Hans/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/zh-Hans/Microsoft.Data.SqlClient.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/zh-Hant/FSharp.Core.resources.dll",
+        "typeproviders/fsharp41/netstandard2.1/zh-Hant/Microsoft.Data.SqlClient.resources.dll"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/9.0.4": {
+      "sha512": "dvjqKp+2LpGid6phzrdrS/2mmEPxFl3jE1+L7614q4ZChKbLJCpHXg6sBILlCCED1t//EE+un/UdAetzIMpqnw==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Configuration.ConfigurationManager.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Configuration.ConfigurationManager.targets",
+        "lib/net462/System.Configuration.ConfigurationManager.dll",
+        "lib/net462/System.Configuration.ConfigurationManager.xml",
+        "lib/net8.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net8.0/System.Configuration.ConfigurationManager.xml",
+        "lib/net9.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net9.0/System.Configuration.ConfigurationManager.xml",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.9.0.4.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Data.SqlClient/4.9.0": {
+      "sha512": "j4KJO+vC62NyUtNHz854njEqXbT8OmAa5jb1nrGfYWBOcggyYUQE0w/snXeaCjdvkSKWuUD+hfvlbN8pTrJTXg==",
+      "type": "package",
+      "path": "system.data.sqlclient/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Data.SqlClient.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Data.SqlClient.targets",
+        "lib/net462/System.Data.SqlClient.dll",
+        "lib/net462/System.Data.SqlClient.xml",
+        "lib/net6.0/System.Data.SqlClient.dll",
+        "lib/net6.0/System.Data.SqlClient.xml",
+        "lib/net8.0/System.Data.SqlClient.dll",
+        "lib/net8.0/System.Data.SqlClient.xml",
+        "lib/netstandard2.0/System.Data.SqlClient.dll",
+        "lib/netstandard2.0/System.Data.SqlClient.xml",
+        "runtimes/unix/lib/net6.0/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/net6.0/System.Data.SqlClient.xml",
+        "runtimes/unix/lib/net8.0/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/net8.0/System.Data.SqlClient.xml",
+        "runtimes/win/lib/net6.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net6.0/System.Data.SqlClient.xml",
+        "runtimes/win/lib/net8.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net8.0/System.Data.SqlClient.xml",
+        "system.data.sqlclient.4.9.0.nupkg.sha512",
+        "system.data.sqlclient.nuspec"
+      ]
+    },
+    "System.Diagnostics.EventLog/9.0.4": {
+      "sha512": "getRQEXD8idlpb1KW56XuxImMy0FKp2WJPDf3Qr0kI/QKxxJSftqfDFVo0DZ3HCJRLU73qHSruv5q2l5O47jQQ==",
+      "type": "package",
+      "path": "system.diagnostics.eventlog/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Diagnostics.EventLog.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
+        "lib/net462/System.Diagnostics.EventLog.dll",
+        "lib/net462/System.Diagnostics.EventLog.xml",
+        "lib/net8.0/System.Diagnostics.EventLog.dll",
+        "lib/net8.0/System.Diagnostics.EventLog.xml",
+        "lib/net9.0/System.Diagnostics.EventLog.dll",
+        "lib/net9.0/System.Diagnostics.EventLog.xml",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.xml",
+        "system.diagnostics.eventlog.9.0.4.nupkg.sha512",
+        "system.diagnostics.eventlog.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Memory/4.6.3": {
+      "sha512": "qdcDOgnFZY40+Q9876JUHnlHu7bosOHX8XISRoH94fwk6hgaeQGSgfZd8srWRZNt5bV9ZW2TljcegDNxsf+96A==",
+      "type": "package",
+      "path": "system.memory/4.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Memory.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/System.Memory.dll",
+        "lib/net462/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "lib/netstandard2.1/_._",
+        "system.memory.4.6.3.nupkg.sha512",
+        "system.memory.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.ProtectedData/9.0.4": {
+      "sha512": "o94k2RKuAce3GeDMlUvIXlhVa1kWpJw95E6C9LwW0KlG0nj5+SgCiIxJ2Eroqb9sLtG1mEMbFttZIBZ13EJPvQ==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.ProtectedData.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net462/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net8.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net8.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net9.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net9.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.security.cryptography.protecteddata.9.0.4.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "FSharp.Core >= 9.0.101"
+      "Dapper >= 2.1.66",
+      "FSharp.Core >= 9.0.101",
+      "Fsharp.Data.sqlClient >= 2.1.3",
+      "Microsoft.Data.Sqlite >= 9.0.5",
+      "SQLProvider >= 1.5.9"
     ]
   },
   "packageFolders": {
@@ -146,10 +1452,30 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.1.66, )",
+            "generatePathProperty": true
+          },
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
             "version": "[9.0.101, )",
+            "generatePathProperty": true
+          },
+          "Fsharp.Data.sqlClient": {
+            "target": "Package",
+            "version": "[2.1.3, )",
+            "generatePathProperty": true
+          },
+          "Microsoft.Data.Sqlite": {
+            "target": "Package",
+            "version": "[9.0.5, )",
+            "generatePathProperty": true
+          },
+          "SQLProvider": {
+            "target": "Package",
+            "version": "[1.5.9, )",
             "generatePathProperty": true
           }
         },

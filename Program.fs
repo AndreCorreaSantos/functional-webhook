@@ -5,6 +5,7 @@ open Microsoft.AspNetCore.Builder
 open Microsoft.Extensions.Hosting
 open System.Text.Json
 open Types
+open Storage
 open PaymentValidation
 open PaymentService
 
@@ -12,6 +13,8 @@ open PaymentService
 let main args =
     let builder = WebApplication.CreateBuilder(args)
     let app = builder.Build()
+
+    CreateDB()
     
     app.MapPost("/webhook", Func<HttpRequest, Task<IResult>>(fun request ->
         task {
@@ -48,6 +51,7 @@ let main args =
                     else
                         // transacao ok confirma e retorna 200
                         do! confirmTransaction payment
+                        do! storeSuccessfulPayment payment
                         return Results.Ok("Pagamento confirmado")
         })
     )   |> ignore
