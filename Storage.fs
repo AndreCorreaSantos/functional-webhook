@@ -34,7 +34,6 @@ let storeSuccessfulPayment (payment: Types.Payment): Task<unit> = task {
         VALUES (@transaction_id, @event, @amount, @currency, @timestamp)
         ON CONFLICT(transaction_id) DO NOTHING;
     """
-    // optionally capture the return value
     let! _ = conn.ExecuteAsync(sql, payment)
     return ()
 }
