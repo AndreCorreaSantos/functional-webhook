@@ -12,23 +12,20 @@ dotnet build
 
 ### Checklist:
 
+### Checklist:
 - [X] O serviço deve verificar a integridade do payload
-
-  - O servidor verifica se todos os campos obrigatórios estão presentes no payload recebido, caso contrário, retorna um erro 400 Bad Request com mensagem "Payload inválido".
+  - O servidor verifica se todos os campos obrigatórios estão presentes no payload recebido (exceto transaction_id que é opcional).
 - [X] O serviço deve implementar algum mecanismo de veracidade da transação
-
-  - Comparo o token enviado com o token armazenado --> caso iguais, confirmo a transação
+  - Comparo o token enviado com o token armazenado para verificar a autenticidade da transação.
 - [X] O serviço deve cancelar a transação em caso de divergência
-
-  - função `cancelTransaction` é chamada quando os tokens divergem. A função manda post para o endpoint `/cancelar` com o payload da transação.
-- [X] O serviço deve retornar um erro em caso de divergência
-
-  - Caso o token enviado não seja igual ao token armazenado, o serviço retorna um erro unauthorized (401) com a mensagem "Token inválido" e cancela a transação.     Caso algum campo obrigatório esteja faltando, o se viço retorna um erro Bad Request (400) com a mensagem "Payload inválido".
+  - Função `cancelTransaction` é chamada quando alguma informação estiver errada (ex: valor incorreto) ou alguma informação obrigatória estiver faltante (exceto transaction_id). A função manda POST para o endpoint `/cancelar` com o payload da transação.
+- [X] O serviço deve tratar divergências conforme especificado
+  - Token inválido/errado: Ignora a transação (não responde, não cancela) - transação considerada falsa
+  - Informações erradas: Cancela a transação via POST `/cancelar`
+  - Informações faltantes (exceto transaction_id): Cancela a transação via POST `/cancelar`
+  - Nenhum código de erro HTTP é retornado para transações problemáticas
 - [X] O serviço deve confirmar a transação em caso de sucesso
-
-  - função `confirmTransaction` é chamada quando os tokens são iguais. A função manda post para o endpoint `/confirmar` com o payload da transação.
+  - Função `confirmTransaction` é chamada quando todos os campos obrigatórios estão presentes, token é válido (igual ao token armazenado) e todas as informações estão corretas. A função retorna 200 OK e manda POST para o endpoint `/confirmar` com o payload da transação.
 - [ ] O serviço deve persistir a transação em um BD
-
 - [X] Implementar um serviço HTTPS
-
-  - O servidor escuta HTTP na porta 5101 e HTTPS na porta 5102
+  - O servidor escuta HTTP na porta 5101 e HTTPS na porta 5102.
