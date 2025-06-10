@@ -10,6 +10,40 @@ dotnet build
 ./run.sh
 ```
 
+### How the Webhook Works
+
+When started, the service deletes any previous `payments.db` file and creates a new SQLite database with a payments table. It exposes a POST endpoint at `/webhook` and works as follows:
+
+#### Token Validation
+The token is extracted from the `X-Webhook-Token` header.
+
+- If the token is missing or incorrect, the transaction is ignored and the server responds with **204 No Content**.
+- No confirmation or cancellation occurs for invalid tokens.
+
+#### Payload Deserialization and Validation
+The request body is read and deserialized into a `Payment` object.
+
+- If deserialization fails (e.g., invalid JSON), the transaction is canceled by sending a POST to `/cancelar` with an empty payload.
+- If required fields are missing or incorrect (except for `transaction_id`, which is optional), the transaction is also canceled via POST to `/cancelar`.
+
+#### Transaction Uniqueness Check
+The service checks if a payment with the same `transaction_id` already exists in the database.
+
+- If found, the transaction is considered a duplicate and is canceled via POST to `/cancelar`.
+
+#### Transaction Confirmation
+If the token is valid, the payload is complete and correct, and the transaction is unique:
+
+- The service sends a POST request to `/confirmar` with the payment data.
+- The transaction is saved to the SQLite database.
+- The service responds with **200 OK** and the message `"Pagamento confirmado"`.
+
+#### Database
+All successful transactions are persisted to the `payments.db` file using Dapper.
+The database is reset at every service startup to ensure a clean environment.
+
+
+
 ### Checklist:
 
 - [X] O serviço deve verificar a integridade do payload
