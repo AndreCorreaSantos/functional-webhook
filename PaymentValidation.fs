@@ -6,9 +6,6 @@ open Types
 let isValidToken (token: string) =
     token = "meu-token-secreto"
 
-let seen = System.Collections.Concurrent.ConcurrentDictionary<string, bool>()
-let isTransactionUnique id = seen.TryAdd(id, true)
-
 let private tryParseAmount (s: string) =
     match Decimal.TryParse(s) with
     | true, v when v > 0.0M -> Some v

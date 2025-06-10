@@ -44,15 +44,18 @@ let main args =
                         // informacoes faltantes ou erradas cancela transacao
                         do! cancelTransaction payment
                         return Results.StatusCode(204)
-                    elif not (isTransactionUnique payment.transaction_id) then
-                        // transacao duplicada cancela
-                        do! cancelTransaction payment
-                        return Results.StatusCode(204)
                     else
-                        // transacao ok confirma e retorna 200
-                        do! confirmTransaction payment
-                        do! storeSuccessfulPayment payment
-                        return Results.Ok("Pagamento confirmado")
+                        let! isUnique = isTransactionUniqueById payment.transaction_id
+                        if not isUnique then
+                            // transacao duplicada cancela
+                            do! cancelTransaction payment
+                            return Results.StatusCode(204)
+                        else
+                            // transacao ok confirma e retorna 200
+                            do! confirmTransaction payment
+                            do! storeSuccessfulPayment payment
+                            return Results.Ok("Pagamento confirmado")
+
         })
     )   |> ignore
     

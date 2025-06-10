@@ -11,6 +11,7 @@ dotnet build
 ```
 
 ### Checklist:
+
 - [X] O serviço deve verificar a integridade do payload
   - O servidor verifica se todos os campos obrigatórios estão presentes no payload recebido (exceto transaction_id que é opcional).
 - [X] O serviço deve implementar algum mecanismo de veracidade da transação
@@ -24,6 +25,7 @@ dotnet build
   - Nenhum código de erro HTTP é retornado para transações problemáticas
 - [X] O serviço deve confirmar a transação em caso de sucesso
   - Função `confirmTransaction` é chamada quando todos os campos obrigatórios estão presentes, token é válido (igual ao token armazenado) e todas as informações estão corretas. A função retorna 200 OK e manda POST para o endpoint `/confirmar` com o payload da transação.
-- [ ] O serviço deve persistir a transação em um BD
+- [X] O serviço deve persistir a transação em um BD
+  - As transações de sucesso são persistidas em um banco de dados SQLite usando DAPPER.
 - [X] Implementar um serviço HTTPS
   - O servidor escuta HTTP na porta 5101 e HTTPS na porta 5102.
